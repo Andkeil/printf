@@ -21,5 +21,5 @@ int print_percent(va_list list, char *buffer, int *ip);
 int _printf2(const char *format, ...);
 int (*formatter(char c))(va_list list, char *, int *);
 void buff_reset(char *buffer, int *ip);
-int buff_check(va_list list, char *buffer, int *ip);
+int buff_check(char *buffer, int *ip);
 #endif

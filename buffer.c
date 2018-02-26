@@ -10,11 +10,12 @@ void buff_reset(char *buffer, int *ip)
 	*ip = 0;
 }
 
-int buff_check(va_list list, char *buffer, int *ip)
+int buff_check(char *buffer, int *ip)
 {
 	if (*ip >= 1024)
 	{
 		write(1, buffer, 1024);
 		buff_reset(buffer, ip);
 	}
+	return (*ip);
 }
