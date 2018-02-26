@@ -1,5 +1,6 @@
 #include"holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * _strlen - main function
  * Return: it will return
