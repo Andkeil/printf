@@ -1,9 +1,13 @@
 #include "holberton.h"
 
-int print_d(va_list list, char *buffer, int *ip)
+int print_c(va_list list, char *buffer, int *ip)
 {
-	buffer[0] = 'c';
-	/*when you wrote to buffer, you forgot to increment *ip*/
+	char c;
+
+	c = va_arg(list, int);
+	*ip = buff_check(buffer, ip);
+	buffer[*ip] = c;
+	// remember to increment *ip
 	(*ip)++;
 	return(*ip);
 }
