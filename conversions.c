@@ -11,3 +11,12 @@ int print_c(va_list list, char *buffer, int *ip)
 	(*ip)++;
 	return(*ip);
 }
+
+int print_s(va_list list, char *buffer, int *ip)
+{
+	char *s;
+
+	s = va_arg(list, char *);
+	*ip = _strcpy(buffer, s, *ip);
+	return(*ip);
+}
