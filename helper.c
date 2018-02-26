@@ -58,3 +58,24 @@ void tostring(char str[], int numbers)
 	}
 	str[len] = '\0';
 }
+/**
+ * _strncpy - main function will copy the string
+ * Return: it will return
+ * @dest: first string
+ * @src: second string
+ * @n : int
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int x;
+
+	for (x = 0 ; x < n && src[x] != '\0' ; x++)
+	{
+		dest[x] = src[x];
+	}
+	for (; x < n ; x++)
+	{
+		dest[x] = '\0';
+	}
+	return (dest);
+}
