@@ -12,7 +12,6 @@ typedef struct converter
 int print_b(va_list list, char *buffer, int *ip);
 int print_c(va_list list, char *buffer, int *ip);
 int print_d(va_list list, char *buffer, int *ip);
-int print_i(va_list list, char *buffer, int *ip);
 int print_s(va_list list, char *buffer, int *ip);
 int print_u(va_list list, char *buffer, int *ip);
 int print_o(va_list list, char *buffer, int *ip);
