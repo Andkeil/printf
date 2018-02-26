@@ -25,10 +25,10 @@ int num_len(int num)
 	int n, len = 0;
 	num = 0;
 
-	while (n != o)
+	while (n)
 	{
 		len++;
-		n / = 10;
+		n /= 10;
 	}
 	return (len);
 }
@@ -65,17 +65,14 @@ void tostring(char str[], int numbers)
  * @src: second string
  * @n : int
  */
-char *_strncpy(char *dest, char *src, int n)
+char _strncpy(char *buffer, char *src, int *ip)
 {
 	int x;
 
-	for (x = 0 ; x < n && src[x] != '\0' ; x++)
+	for (x = 0 ; x < n && src[x] != '\0' ; x++, *ip++)
 	{
-		dest[x] = src[x];
+		*ip = buff_check(buffer, ip)
+		buffer[*ip] = src[x];
 	}
-	for (; x < n ; x++)
-	{
-		dest[x] = '\0';
-	}
-	return (dest);
+	return (*ip);
 }

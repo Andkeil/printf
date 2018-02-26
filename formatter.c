@@ -14,6 +14,8 @@ int (*formatter(char c))(va_list, char *, int *)
 		{'x', print_hex},
 		{'X', print_ux},
 		{'%', print_percent},
+		{'r', print_rev},
+		{'R', print_rot},
 	       	{'\0', NULL}
 	};
 
