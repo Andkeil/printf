@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strlen - main function
- * Return: it will return
- * @s: finds the length of the string
+ * binary_convert - main function
+ * Return: converts an int into a binary number
+ * @num: the number being passed in
  */
 long binary_convert(unsigned int num)
 {
@@ -20,6 +20,12 @@ long binary_convert(unsigned int num)
 	}
 	return (binary);
 }
+/**
+ *binary_string- converts the binary into a string
+ * @num: number that is passes in
+ * Return: will return a string
+ */
+
 char *binary_string(int num)
 {
 	int b;
