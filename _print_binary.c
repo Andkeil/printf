@@ -1,35 +1,31 @@
 #include"holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "helper.c"
 /**
  * _strlen - main function
  * Return: it will return
  * @s: finds the length of the string
  */
-int printf_binary(va_list list, char *buffer, int *p, int biny)
+long binary_convert(unsigned int num)
 {
-	int bnums = [1000];
-	int store;
+	int remain;
+	long x = 1, binary = 0;
 
-	va_start (list , biny);
-	store = 0;
-	while (biny > 0) /*counter*/
+	while (num != 0)
 	{
-		bnums[store] = biny % 2; /*store the remainder in store array*/
-		biny = biny / 2;
-		store++;
-		return (biny);
+		remain = num % 2;
+		num /= 2;
+		binary = binary + (remain * x);
+		x = x * 10;
 	}
-	binary_string(biny);
-	va_end(list); /*clear variadic list*/
+	return (binary);
 }
-int binary_string(int num)
+char *binary_string(int num)
 {
-	char *strptr;
+	int b;
+	char *s;
 
-	strptr = tostring(num);
-	return (strptr);
-
+	b = binary_convert(num);
+	s = tostring(b);
+	return (s);
 }
- 
