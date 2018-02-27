@@ -1,5 +1,13 @@
 #include "holberton.h"
-#include <stdarg.h>
+#inlcude < stdarg.h >
+/**
+ *print_rot- main for converting into rot13
+ * @list: stores given string into the list
+ * @buffer: char pointer to buffer function
+ * @ip: int pointer to the index pointer where we curretly are in func
+ * Return: the int pointer
+ */
+
 int print_rot(va_list list, char *buffer, int *ip)
 {
 	char *s;
@@ -23,7 +31,13 @@ int print_rot(va_list list, char *buffer, int *ip)
 	}
 	return (*ip);
 }
-
+/**
+ *print_rev- main for printing in reverse
+ * @list: stores string
+ * @buffer: char pointer to buffer function
+ * @ip: int pointer to ip (index pointer)
+ * Return: the in pointer
+ */
 int print_rev(va_list list, char *buffer, int *ip)
 {
 	char *s;
@@ -31,7 +45,7 @@ int print_rev(va_list list, char *buffer, int *ip)
 
 	s = va_arg(list, char *);
 	j = _strlen(s) - 1;
-	for(i = j; i >= 0; i--)
+	for (i = j; i >= 0; i--)
 	{
 		buff_check(buffer, ip);
 		buffer[*ip] = s[i];
