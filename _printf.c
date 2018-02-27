@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 #include <stdio.h>
-int _printf2(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i = 0, index = 0, *ip = &index;
 	int (*get_format)(va_list, char *, int *);
@@ -15,12 +15,12 @@ int _printf2(const char *format, ...)
 
 	while (format != NULL && format[i])
 	{
-		if (format[i] !='%' && format[i-1] != '%')
+		if (format[i] !='%' && format[i - 1] != '%')
 		{
 			buffer[*ip] = format[i];
 			(*ip)++;
 		}
-		else if (format[i] == '%')
+		else if (format[i] == '%' && format[i - 1] != '%')
 		{
 			get_format = formatter(format[i + 1]);
 			get_format(list, buffer, ip);
@@ -28,7 +28,7 @@ int _printf2(const char *format, ...)
 		i++;
 	}
 	va_end(list);
-	write(1, buffer, index);
+	write(1, buffer, *ip);
 //	free(buffer); /* free buffer */
 	return (index);
 }

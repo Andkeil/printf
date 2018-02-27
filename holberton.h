@@ -2,6 +2,7 @@
 #define HOLBERTON_H
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 typedef struct converter
 {
@@ -20,11 +21,15 @@ int print_ux(va_list list, char *buffer, int *ip);
 int print_percent(va_list list, char *buffer, int *ip);
 int print_rev(va_list list, char *buffer, int *ip);
 int print_rot(va_list list, char *buffer, int *ip);
-int _printf2(const char *format, ...);
+int _printf(const char *format, ...);
 int (*formatter(char c))(va_list list, char *, int *);
 void buff_reset(char *buffer, int *ip);
 int buff_check(char *buffer, int *ip);
-int _strcpy(char *buffer, char *src, int *ip);
+int _strncpy(char *buffer, char *src, int *ip);
 int _strlen(char *s);
 int num_len(int num);
+char *tostring(int n);
+int print_binary(va_list list, char *buffer, int *ip);
+long binary_convert(unsigned int n);
+char *binary_string(int num);
 #endif

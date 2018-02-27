@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _strlen - main function
- * Return: it will return
+ * Return: length of string
  * @s: finds the length of the string
  */
 int _strlen(char *s)
@@ -17,7 +17,7 @@ int _strlen(char *s)
 }
 /**
  * num_len - helper function that converts ints to a string
- * Return: a stirng pointer
+ * Return: length of number
  * @num: looking for numbers
  */
 int num_len(int num)
@@ -34,44 +34,51 @@ int num_len(int num)
 }
 /**
  * tostring - converts int to a string
- * Return: it will return nothing
- * @str : string that it will be converted to
- * @numbers: numbers that will be converted
+ * Return: string
+ * @num: numbers that will be converted
  */
-void tostring(char str[], int numbers)
+char *tostring(int num)
 {
-	int i, j, len = 0, n;
-	n = 0;
+	int i, j, x = 0;
+	char *s, tmp;
 
-	n = numbers;
-	while (n != 0)
+	s = malloc(num_len(num) * sizeof(char));
+	if (s == NULL)
+		return;
+	if (num == 0)
+		s[x] = '0';
+	else if (num < 0)
+		num = (num * -1);
+	while (num != 0)
 	{
-		len++;
-		n / = 10;
+		s[x] = num % 10 + '0';
+		num /= 10;
+		x++;
 	}
-
-	for ( i = 0; i < len; i++)
+	s[x] = '\0';
+	i = _strlen(s) - 1;
+	for (j = 0; j <= i /2; j++)
 	{
-		j = numbers % 10;
-		numbers = numbers / 10;
-		str[len - (i + 1)] = numbers + '0';
+		tmp = s[j];
+		s[j] = s[i - j];
+		s[i - j] = tmp;
 	}
-	str[len] = '\0';
+	return (s);
 }
 /**
  * _strncpy - main function will copy the string
- * Return: it will return
- * @dest: first string
+ * Return: index pointer
+ * @buffer: first string
  * @src: second string
- * @n : int
+ * @ip : index pointer
  */
-char _strncpy(char *buffer, char *src, int *ip)
+int _strncpy(char *buffer, char *src, int *ip)
 {
 	int x;
 
-	for (x = 0 ; x < n && src[x] != '\0' ; x++, *ip++)
+	for (x = 0 ; src[x] != '\0'; x++, (*ip)++)
 	{
-		*ip = buff_check(buffer, ip)
+		*ip = buff_check(buffer, ip);
 		buffer[*ip] = src[x];
 	}
 	return (*ip);

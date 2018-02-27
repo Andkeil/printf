@@ -5,15 +5,15 @@ int (*formatter(char c))(va_list, char *, int *)
 	int i = 0;
 	converter_t form[] = {
 	       	{'d', print_d},
-	       	{'b', print_b},
+		//	{'b', print_b},
 		{'c', print_c},
 	       	{'i', print_d},
 		{'s', print_s},
-		{'u', print_u},
+		/*	{'u', print_u},
 		{'o', print_o},
 		{'x', print_hex},
-		{'X', print_ux},
-		{'%', print_percent},
+	       	{'X', print_ux},
+		*/{'%', print_percent},
 		{'r', print_rev},
 		{'R', print_rot},
 	       	{'\0', NULL}
