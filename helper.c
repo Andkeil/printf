@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strlen - main function
+ * _strlen - main function for finding length of string
  * Return: length of string
  * @s: finds the length of the string
  */
@@ -22,7 +22,9 @@ int _strlen(char *s)
  */
 int num_len(int num)
 {
-	int n,  len = 0;
+	int n;
+	int len = 0;
+
 	n = num;
 	while (n)
 	{
@@ -43,7 +45,7 @@ char *tostring(int num)
 
 	s = malloc(num_len(num) * sizeof(char));
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 	if (num == 0)
 		s[x] = '0';
 	else if (num < 0)
@@ -56,7 +58,7 @@ char *tostring(int num)
 	}
 	s[x] = '\0';
 	i = _strlen(s) - 1;
-	for (j = 0; j <= i /2; j++)
+	for (j = 0; j <= i / 2; j++)
 	{
 		tmp = s[j];
 		s[j] = s[i - j];
