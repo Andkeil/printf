@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "holberton.h"
-
+/**
+ * buff_reset- main for writing and resetting the buffer
+ * @buffer: pointer to current buffer
+ * @ip: current index of buffer
+ * Return: int pointer
+ */
 void buff_reset(char *buffer, int *ip)
 {
 	int i;
@@ -9,7 +14,12 @@ void buff_reset(char *buffer, int *ip)
 		buffer[i] = 0;
 	*ip = 0;
 }
-
+/**
+ * buff_check- checking to see if buffer is full if true will write and reset
+ * @buffer: pointer to current buffer
+ * @ip: current index of buffer
+ * Return: int pointer
+ */
 int buff_check(char *buffer, int *ip)
 {
 	if (*ip >= 1024)
