@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include "holberton.h"
 #include <stdio.h>
+/**
+ *_printf- main for checking to see if there is a conversion
+ * @format: char pointer
+ * Return: number of characters printed
+ */
+
+
 int _printf(const char *format, ...)
 {
 	int i = 0, index = 0, *ip = &index;
@@ -15,7 +22,7 @@ int _printf(const char *format, ...)
 
 	while (format != NULL && format[i])
 	{
-		if (format[i] !='%' && format[i - 1] != '%')
+		if (format[i] != '%' && format[i - 1] != '%')
 		{
 			buffer[*ip] = format[i];
 			(*ip)++;
