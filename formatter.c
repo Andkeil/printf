@@ -5,7 +5,7 @@ int (*formatter(char c))(va_list, char *, int *)
 	int i = 0;
 	converter_t form[] = {
 	       	{'d', print_d},
-		//	{'b', print_b},
+	       	{'b', print_binary},
 		{'c', print_c},
 	       	{'i', print_d},
 		{'s', print_s},

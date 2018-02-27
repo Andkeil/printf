@@ -28,8 +28,8 @@ int buff_check(char *buffer, int *ip);
 int _strncpy(char *buffer, char *src, int *ip);
 int _strlen(char *s);
 int num_len(int num);
+char *binary_string(int num);
 char *tostring(int n);
 int print_binary(va_list list, char *buffer, int *ip);
 long binary_convert(unsigned int n);
-char *binary_string(int num);
 #endif

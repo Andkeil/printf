@@ -22,9 +22,8 @@ int _strlen(char *s)
  */
 int num_len(int num)
 {
-	int n, len = 0;
-	num = 0;
-
+	int n,  len = 0;
+	n = num;
 	while (n)
 	{
 		len++;
@@ -44,7 +43,7 @@ char *tostring(int num)
 
 	s = malloc(num_len(num) * sizeof(char));
 	if (s == NULL)
-		return;
+		return(NULL);
 	if (num == 0)
 		s[x] = '0';
 	else if (num < 0)
