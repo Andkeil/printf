@@ -23,7 +23,7 @@ long binary_convert(unsigned int num)
 /**
  *binary_string- converts the binary into a string
  * @num: number that is passes in
- * Return: will return a string
+ * Return: returns a string
  */
 
 char *binary_string(int num)
