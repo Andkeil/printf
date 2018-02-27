@@ -25,6 +25,11 @@ int _printf(const char *format, ...)
 			get_format = formatter(format[i + 1]);
 			get_format(list, buffer, ip);
 		}
+		else if (format[i] != '%' && format[i - 1] == '%' && format[i - 2] == '%')
+		{
+			buffer[*ip] = format[i];
+			(*ip)++;
+		}
 		i++;
 	}
 	va_end(list);
