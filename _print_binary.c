@@ -9,7 +9,7 @@
  */
 int printf_binary(va_list list, char *buffer, int *p, int biny)
 {
-	int bnums = [1000];
+	int bnums = [1024];
 	int store;
 
 	va_start (list , biny);
