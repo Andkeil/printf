@@ -48,7 +48,10 @@ char *tostring(int a)
 	if (s == NULL)
 		return (NULL);
 	if (num == 0)
+	{
 		s[x] = '0';
+		x++;
+	}
 	else if (num < 0)
 		num *= -1;
 	while (num != 0)
