@@ -1,1 +1,2 @@
-Placeholder readme
+printf is the function used to display the output text on terminal in C programming laguage. In c Printf is a pre defined function which is defined by header file stdio.h basically Printf is used to print the value of any variable.
+It uses many conversions, the ones that we will be using in this _printf are s, i, d, %%, R, r, d and b.

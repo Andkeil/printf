@@ -8,17 +8,10 @@
  */
 long binary_convert(unsigned int num)
 {
-	int remain;
-	long x = 1, binary = 0;
-
-	while (num != 0)
-	{
-		remain = num % 2;
-		num /= 2;
-		binary = binary + (remain * x);
-		x = x * 10;
-	}
-	return (binary);
+	if (num == 0)
+		return (0);
+	else
+		return (num % 2 + 10 * binary_convert(num / 2));
 }
 /**
  *binary_string- converts the binary into a string
@@ -28,7 +21,7 @@ long binary_convert(unsigned int num)
 
 char *binary_string(int num)
 {
-	int b;
+	long int b;
 	char *s;
 
 	b = binary_convert(num);
