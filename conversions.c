@@ -32,6 +32,7 @@ int print_s(va_list list, char *buffer, int *ip)
 
 	s = va_arg(list, char *);
 	*ip = _strncpy(buffer, s, ip);
+	free(s);
 	return (*ip);
 }
 /**
@@ -55,6 +56,7 @@ int print_d(va_list list, char *buffer, int *ip)
 	}
 	s = tostring(x);
 	*ip = _strncpy(buffer, s, ip);
+	free(s);
 	return (*ip);
 }
 /**
@@ -94,5 +96,6 @@ int print_binary(va_list list, char *buffer, int *ip)
 	}
 	s = binary_string(x);
 	*ip = _strncpy(buffer, s, ip);
+	free(s);
 	return (*ip);
 }
