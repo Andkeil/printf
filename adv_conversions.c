@@ -13,8 +13,8 @@ int print_rot(va_list list, char *buffer, int *ip)
 	char *s;
 	int i, j;
 
-	char *rot1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *rot2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *rot1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ,?!;'@-=+\"\\$%^&*()`~<>/:[]{}_|.\n;";
+	char *rot2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ,?!;'@-=+\"\\$%^&*()`~<>/:[]{}_|.\n;";
 
 	s = va_arg(list, char *);
 	for (i = 0; s[i] != '\0'; i++)
