@@ -89,6 +89,7 @@ int print_binary(va_list list, char *buffer, int *ip)
 	{
 		*ip = buff_check(buffer, ip);
 		buffer[*ip] = '-';
+		x *= -1;
 		(*ip)++;
 	}
 	s = binary_string(x);
