@@ -1,0 +1,57 @@
+.TH _PRINTF(3) "FEBRUARY 2018" C "Holberton School"
+.SH NAME
+.B _printf
+\
+.SH SYNOPSIS
+.I int
+.B _printf
+(\fIconst char *format, ...)
+.SH DESCRIPTION
+The
+.B _printf
+function acts as a printf function would. This will send an output to the stdout as a character string.\
+_printf will format and print the data. Conversion specifications are given to and introduced with a % character. After the %\ one of the following is will appear:
+.IP i
+Prints an integer
+.IP d
+Prints a decimal
+.IP s
+This will print a string
+.IP c
+This will print a character
+.IP %%
+This will print a single % character
+.IP b
+This will print a binary number
+.IP R
+This will print rot13 encrypted string
+.IP r
+This will print the reverse string
+.P
+.SH RETURN VALUES
+If successful it will return the number of characters printed. This function will return negative 1 if it encounters and error\
+. If a NULL is passed it will return 0.
+.SH EXAMPLES
+To print a string:
+.RS
+#include "holberton.h"
+_printf("String:[%s]\n", "I am a string !");
+To print a percent:
+.RS
+#include "holberton.h"
+_printf("Percent:[%%]\n");
+.RS
+To print a character:
+#include "holberton.h"
+_printf("Character:[%c]\n", 'H');
+.RS
+To print a negative integer:
+#include "holberton.h"
+_printf("Negative:[%d]\n", -762534);
+.RE
+.RE
+.SH BUGS
+This _printf function cannot handle the x,X,o conversions and the l and h \
+modifers.
+.SH AUTHOR(S)
+Andrew Keil and Pamela Maupin
