@@ -3,7 +3,12 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
+/**
+ *struct converter- main function
+ * @tp: type of conversion
+ * @f: function pointer
+ * Description: s
+ */
 typedef struct converter
 {
 	char tp;
@@ -14,10 +19,6 @@ int print_b(va_list list, char *buffer, int *ip);
 int print_c(va_list list, char *buffer, int *ip);
 int print_d(va_list list, char *buffer, int *ip);
 int print_s(va_list list, char *buffer, int *ip);
-int print_u(va_list list, char *buffer, int *ip);
-int print_o(va_list list, char *buffer, int *ip);
-int print_hex(va_list list, char *buffer, int *ip);
-int print_ux(va_list list, char *buffer, int *ip);
 int print_percent(va_list list, char *buffer, int *ip);
 int print_rev(va_list list, char *buffer, int *ip);
 int print_rot(va_list list, char *buffer, int *ip);
