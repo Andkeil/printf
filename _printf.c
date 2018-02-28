@@ -31,7 +31,10 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i - 1] != '%')
 		{
 			get_format = formatter(format[i + 1]);
-			get_format(list, buffer, ip);
+			if (get_format == NULL)
+				return (-1);
+			else
+				get_format(list, buffer, ip);
 		}
 		else if (format[i] != '%' && format[i - 1] == '%' && format[i - 2] == '%')
 		{
