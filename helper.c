@@ -38,6 +38,8 @@ int num_len(int num)
  * Return: string
  * @a: numbers that will be converted
  */
+
+
 char *tostring(int a)
 {
 	int i, j, x = 0;
@@ -70,6 +72,7 @@ char *tostring(int a)
 	}
 	return (s);
 }
+
 /**
  * _strncpy - main function will copy the string
  * Return: index pointer
