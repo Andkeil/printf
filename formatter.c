@@ -21,8 +21,6 @@ int (*formatter(char c))(va_list, char *, int *)
 
 	while (form[i].tp != '\0')
 	{
-		if (form[i].tp == '\0')
-			return (-1);
 		if (form[i].tp == c)
 			return (form[i].f);
 		i++;
