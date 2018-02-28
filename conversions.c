@@ -45,12 +45,12 @@ int print_s(va_list list, char *buffer, int *ip)
 int print_d(va_list list, char *buffer, int *ip)
 {
 	char *s;
-	int x;
-
+	long int x;
 	x = va_arg(list, int);
 	if (x < 0)
 	{
 		buffer[*ip] = '-';
+		x *= -1;
 		(*ip)++;
 	}
 	s = tostring(x);
@@ -88,8 +88,8 @@ int print_binary(va_list list, char *buffer, int *ip)
 	if (x < 0)
 	{
 		*ip = buff_check(buffer, ip);
-		x = (x * -1);
 		buffer[*ip] = '-';
+		x *= -1;
 		(*ip)++;
 	}
 	s = binary_string(x);

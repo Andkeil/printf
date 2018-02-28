@@ -36,12 +36,13 @@ int num_len(int num)
 /**
  * tostring - converts int to a string
  * Return: string
- * @num: numbers that will be converted
+ * @a: numbers that will be converted
  */
-char *tostring(int num)
+char *tostring(int a)
 {
 	int i, j, x = 0;
 	char *s, tmp;
+	long int num = (long int)a;
 
 	s = malloc(num_len(num) * sizeof(char));
 	if (s == NULL)
@@ -49,7 +50,7 @@ char *tostring(int num)
 	if (num == 0)
 		s[x] = '0';
 	else if (num < 0)
-		num = (num * -1);
+		num *= -1;
 	while (num != 0)
 	{
 		s[x] = num % 10 + '0';
