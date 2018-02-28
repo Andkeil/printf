@@ -7,7 +7,7 @@
  *struct converter- main function
  * @tp: type of conversion
  * @f: function pointer
- * Description: s
+ * Description: contains the types of conversions
  */
 typedef struct converter
 {
